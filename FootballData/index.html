@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <script src="/lib/angular.js/angular.min.js"></script>
+    <script src="/lib/angular.js/angular-route.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <title></title>
+</head>
+<body>
+<div ng-controller="dataController">
+    <div class="row">
+        <div class="col-sm-1 players">
+            <a href="#!/">Home</a>
+            <div class="card border-dark mb-3" style="max-width: 10rem;" ng-repeat="p in playersOrdered | orderBy" {{p.points}}>
+                <img class="card-img-bottom" src={{p.pic}} alt={{p.name}}>
+                <p class="card-text">Points: {{p.points}}</p>
+                <a href="#!/Prediction/{{$index}}" class="card-link stretched-link"></a>
+            </div>
+        </div>
+  
+        <div class="col-9">
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+</body>
+</html>

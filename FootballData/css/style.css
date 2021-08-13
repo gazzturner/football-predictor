@@ -1,0 +1,14 @@
+﻿.col-sm-1 {
+    text-align: center;
+    margin-left: 3px;
+}
+
+.players {
+    background-color: ivory;
+    border: solid 1px;
+    align-content: center
+}
+
+.table {
+     font-size: small;
+}
